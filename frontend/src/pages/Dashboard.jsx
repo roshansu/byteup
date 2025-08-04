@@ -10,7 +10,7 @@ const Dashboard = () => {
 
     const [sidebar, setSideBar] = useState('dashboard')
 
-    const [isLogin, setIsLogin] = useState(true)
+    const [isLogin, setIsLogin] = useState(null)
     const [role, setRole] = useState('')
     const [id, setId] = useState('')
     const navigate = useNavigate()
