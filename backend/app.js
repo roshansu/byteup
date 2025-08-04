@@ -31,7 +31,7 @@ const upload =  multer({
 });
 
 app.use(cors({
-  origin: ['https://byteup-83bv.vercel.app', 'http://localhost:5173'], 
+  origin: ['https://byteup-83bv.vercel.app', 'http://localhost:5173', 'https://www.byteup.online'], 
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', "PATCH"], 
   credentials: true 
 }));
