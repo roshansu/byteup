@@ -30,7 +30,9 @@ const upload =  multer({
     limits: { fileSize: 5 * 1024 * 1024 } // 5 MB max
 });
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://byteup-83bv.vercel.app' // or your frontend production URL
+}));
 
 app.use(express.json({ limit: '10mb', type: 'application/json' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
