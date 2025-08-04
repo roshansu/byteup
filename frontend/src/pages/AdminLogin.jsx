@@ -17,7 +17,7 @@ export default function AdminLogin({isLogin}) {
         e.preventDefault();
         if(email && password){
             setHide('process')
-            const res = await fetch('http://localhost:5000/adminlogin',{
+            const res = await fetch('https://byteup-ten.vercel.app/adminlogin',{
                 headers:{
                     "Content-type": 'application/json'
                 },

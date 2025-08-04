@@ -20,7 +20,7 @@ console.log(userId)
   useEffect(() => {
     // Fetch user
     console.log(userId)
-    fetch(`http://localhost:5000/user/${userId}`,{
+    fetch(`https://byteup-ten.vercel.app/user/${userId}`,{
       method:"GET"
     })
       .then(res => res.json())
@@ -41,12 +41,12 @@ console.log(userId)
       const formData = new FormData();
       formData.append('photo', compressedFile);
 
-      await fetch(`http://localhost:5000/user/update/photo/${userId}?url=${encodeURIComponent(user.photo)}`, {
+      await fetch(`https://byteup-ten.vercel.app/user/update/photo/${userId}?url=${encodeURIComponent(user.photo)}`, {
         method: "POST",
         body: formData,
       });
     } else {
-      await fetch(`http://localhost:5000/user/update/${field}/${userId}`, {
+      await fetch(`https://byteup-ten.vercel.app/user/update/${field}/${userId}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ [field]: fieldValue }),
@@ -55,7 +55,7 @@ console.log(userId)
 
     setEditField(null);
     // Refetch user
-    const res = await fetch(`http://localhost:5000/user/${userId}`);
+    const res = await fetch(`https://byteup-ten.vercel.app/user/${userId}`);
     const updatedUser = await res.json();
     setUser(updatedUser);
   };

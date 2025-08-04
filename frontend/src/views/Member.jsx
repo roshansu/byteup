@@ -9,7 +9,7 @@ const Member = () => {
 
     useEffect(()=>{
         async function fetchData() {
-            const res = await fetch('http://localhost:5000/getsession',{
+            const res = await fetch('https://byteup-ten.vercel.app/getsession',{
             method:'GET'
         })
         const data = await res.json();

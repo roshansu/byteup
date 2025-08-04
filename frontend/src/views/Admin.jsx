@@ -9,7 +9,7 @@ const Admin = () => {
     const [data, setData] = useState([]);
 
     async function fetchData() {
-        const res = await fetch('http://localhost:5000/getadmin', {
+        const res = await fetch('https://byteup-ten.vercel.app/getadmin', {
          method:'GET'
          })
         const data = await res.json();

@@ -177,7 +177,7 @@ export default function RegistrationForm() {
     console.log('Form submitted:', data);
     setHide('process')
 
-    const res = await fetch("http://localhost:5000/register", {
+    const res = await fetch("https://byteup-ten.vercel.app/register", {
       method: "POST",
       body:data,
     })

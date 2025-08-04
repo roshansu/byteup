@@ -15,7 +15,7 @@ export default function AdminCard({name, email, role, verified, phone, specializ
         setStatus('Approved')
         alert('Approved')
 
-        await fetch('http://localhost:5000/approve',{
+        await fetch('https://byteup-ten.vercel.app/approve',{
           headers: {
                 "Content-Type": "application/json",
             },

@@ -17,7 +17,7 @@ const Rendercard = () => {
 
 useEffect(() => {
   async function fetchData() {
-    const res = await fetch('http://localhost:5000/getdata');
+    const res = await fetch('https://byteup-ten.vercel.app/getdata');
     const data = await res.json();
     setLoading(false);
 

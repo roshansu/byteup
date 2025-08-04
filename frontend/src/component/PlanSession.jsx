@@ -14,7 +14,7 @@ export default function PlanSession() {
         e.preventDefault()
         if(day && time && location && detail){
             setHide('success')
-            const res = await fetch('http://localhost:5000/newsession',{
+            const res = await fetch('https://byteup-ten.vercel.app/newsession',{
                 headers: {
                 "Content-Type": "application/json",
             },

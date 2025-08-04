@@ -6,7 +6,7 @@ export default function MemberViewCard({day, time, loaction, detail, user}) {
 
      useEffect(()=>{
         async function fetchData() {
-            const res = await fetch(`http://localhost:5000/sessionuser?id=${user}`,{
+            const res = await fetch(`https://byteup-ten.vercel.app/sessionuser?id=${user}`,{
             method:'GET',
         })
         const data = await res.json();

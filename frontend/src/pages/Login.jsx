@@ -71,7 +71,7 @@ export default function LoginForm() {
       setHide('process')
       
       // Simulate API call
-      const res = await fetch("http://localhost:5000/login", {
+      const res = await fetch("https://byteup-ten.vercel.app/login", {
         headers: {
         "Content-Type": "application/json",
       },
