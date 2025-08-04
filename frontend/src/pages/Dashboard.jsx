@@ -20,7 +20,9 @@ const Dashboard = () => {
             setRole(localStorage.getItem('role'))
             setId(localStorage.getItem('id'))
         },[]) 
-
+        if (isLogin === null) {
+            return <div className="flex justify-center py-4">Loading...</div>; // or your custom <Loading />
+        }
         if (!isLogin) {
              return(<PageNotFOund/>)
         }

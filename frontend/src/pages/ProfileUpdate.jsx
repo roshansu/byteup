@@ -4,13 +4,28 @@ import imageCompression from 'browser-image-compression'
 import { useNavigate } from "react-router-dom";
 import SuccessAlert from "../component/Successalert";
 
-export default function ProfileUpdate({isLogin, userId, role}) {
+export default function ProfileUpdate() {
   const [user, setUser] = useState(null);
   const [editField, setEditField] = useState(null);
   const [fieldValue, setFieldValue] = useState('');
   const [photoFile, setPhotoFile] = useState(null);
   const [hide, setHide] = useState('')
   const navigate = useNavigate()
+
+  const [isLogin, setIsLogin] = useState(null); // initially null
+  const [role, setRole] = useState(null);
+  const [userId, setId] = useState(null);
+
+useEffect(() => {
+  const login = localStorage.getItem('isLogin');
+  setIsLogin(JSON.parse(login));
+  setRole(localStorage.getItem('role'));
+  setId(localStorage.getItem('id'));
+}, []);
+
+if (isLogin === null) {
+  return <div className="flex justify-center py-4">Loading...</div>; // or your custom <Loading />
+}
 
     if (!isLogin)
             return(<PageNotFOund/>)
