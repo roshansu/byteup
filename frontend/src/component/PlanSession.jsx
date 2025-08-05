@@ -13,6 +13,7 @@ export default function PlanSession() {
     async function handleSubmit(e) {
         e.preventDefault()
         if(day && time && location && detail){
+            setOpen(false)
             setHide('success')
             const res = await fetch('https://byteup-ten.vercel.app/newsession',{
                 headers: {
@@ -27,6 +28,7 @@ export default function PlanSession() {
                 user,
             })
             })
+            setHide('')
         }
     }
 
@@ -34,7 +36,7 @@ export default function PlanSession() {
     return (
        <div className="pb-10">
             { hide === 'success'?<SuccessAlert close={setHide} text={"Session planned"} />:''}
-        <div onClick={()=>setOpen(open?false:true)} className="text-lg text-white bg-blue-500 hover:bg-blue-700 cursor-pointer transition duration-200 font-medium rounded-xl py-2 px-4 flex items-center justify-center">
+        <div onClick={()=>setOpen(open?false:true)} className="text-lg mt-4 text-white bg-blue-500 hover:bg-blue-700 cursor-pointer transition duration-200 font-medium rounded-xl py-2 px-4 flex items-center justify-center">
             Plan a new session
         </div>
 

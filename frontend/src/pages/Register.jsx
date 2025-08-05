@@ -191,7 +191,7 @@ export default function RegistrationForm() {
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4">
       { hide === 'process'?<WaitAlert/>:''}
-      { hide === 'success'?<SuccessAlert close={setHide} text={"Registeration success, now you will get response from our team soon."} />:''}
+      { hide === 'success'?<SuccessAlert close={setHide} text={"Registeration success! Check your email, now you will get response from our team soon."} />:''}
       { hide === 'error'?<ErrorAlert close={setHide} text={"User already register or something went wrong!!"} />:''}
       
       <div className="max-w-4xl mx-auto">
@@ -490,7 +490,7 @@ export default function RegistrationForm() {
                     name="about"
                     value={formData.about}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 rounded-lg border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 ${
+                    className={`w-full px-4 py-3 lg:text-lg rounded-lg border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 ${
                       errors.about ? 'border-red-300 bg-red-50' : 'border-gray-300 focus:border-gray-400'
                     }`}
                     placeholder="Describe your skills/subject in which you are good in"
