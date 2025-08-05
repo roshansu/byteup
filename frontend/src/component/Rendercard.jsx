@@ -5,7 +5,7 @@ import TeamMemberCard from './Teamcard';
 import MemberCard from './MemberCard';
 import Loading from './Loading';
 
-const Rendercard = () => {
+const Rendercard = ({login}) => {
   const mentorRef = useRef();
   const memberRef = useRef();
   const adminRef = useRef();
@@ -87,8 +87,9 @@ useEffect(() => {
         >
           {
           mentorData.map((item) => (
-            <MentorCard
+            <MentorCard login={login}
               key={item._id}
+              phone={item.phone}
               name={item.name}
               photo={item.photo}
               course={item.course}
@@ -130,7 +131,7 @@ useEffect(() => {
         >
           {
             memberData.map((item)=>(
-              <MemberCard key={item._id}
+              <MemberCard key={item._id} login={login} phone={item.phone}
                 name={item.name} photo={item.photo} course={item.course}
                 passout={item.passout} linkedin={item.linkedin} github={item.github}
                 specialization={item.specialization}
@@ -167,8 +168,8 @@ useEffect(() => {
         {
             adminData.map((item)=>(
               <TeamMemberCard
-                key={item._id} name={item.name} photo={item.photo} 
-                role={item.phone === "8434822338"?"Founder":"Admin"}
+                key={item._id} name={item.name} photo={item.photo}  login={login}
+                role={item.phone === "8434822338"?"Founder":"Admin"} phone={item.phone}
                 linkedin={item.linkedin} github={item.github} about={item.about}
               />
             ))

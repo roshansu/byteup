@@ -1,6 +1,6 @@
 import React from "react";
 
-const MentorCard = ({name, photo, about, course, passout, linkedin, github, specialization}) => {
+const MentorCard = ({name, photo, login, about, course,phone, passout, linkedin, github, specialization}) => {
   const [visible, setVisible] = React.useState(false);
     const [position, setPosition] = React.useState({ x: 0, y: 0 });
     const divRef = React.useRef(null);
@@ -27,7 +27,8 @@ const MentorCard = ({name, photo, about, course, passout, linkedin, github, spec
                 <h2 className="text-2xl font-bold text-gray-800 mb-1">{name}</h2>
                 <p className="text-sm text-indigo-500 font-medium">{specialization}</p>
                 <p className="text-sm text-black font-medium ">{course}</p>
-                <p className="text-sm text-black font-medium mb-4">{passout} Batch</p>
+                <p className="text-sm text-black font-medium ">{passout} Batch</p>
+                <p className={` ${login?'block:':'hidden'} text-sm text-black font-medium mb-4`}>&#128222; {phone}</p>
                 <p className="text-sm text-gray-500 mb-4 px-4">
                    {about}
                 </p>

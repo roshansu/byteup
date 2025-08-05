@@ -1,10 +1,10 @@
-export default function TeamMemberCard({name, photo, linkedin, github, about, role}) {
+export default function TeamMemberCard({name, photo, linkedin, login, github, phone, about, role}) {
     return (
                <div className="group flex flex-col shrink-0 w-72 h-96 items-center py-8 text-sm bg-white border border-gray-300/60 rounded-md cursor-pointer hover:border-blue-600 hover:bg-blue-600 transition">
                     <img className="w-28 h-28 rounded-full" src={photo} alt={name} />
                     <h2 className="text-gray-700 group-hover:text-white text-lg font-medium mt-2">{name}</h2>
                     <p className="text-blue-700 font-medium text-base group-hover:text-white/80">{role}</p>
-                    <p className="text-center text-gray-500 font-medium group-hover:text-white/60 w-3/4 mt-4">{about}</p>
+                    <p className={` ${login?'block:':'hidden'} text-base text-black font-medium group-hover:text-white/80`}>&#128222; {phone}</p><p className="text-center text-gray-500 font-medium group-hover:text-white/60 w-3/4 mt-4">{about}</p>
                     <div className="flex items-center space-x-4 mt-6 text-gray-500 group-hover:text-white">
                         <a href={github} target="_blank" className='hover:-translate-y-0.5 transition'>
                         <svg className="size-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">

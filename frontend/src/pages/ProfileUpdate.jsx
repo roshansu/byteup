@@ -61,6 +61,8 @@ console.log(userId)
   };
 
   function logOut(){
+     if(!confirm("Are you sure logout?"))
+          return
     localStorage.clear();
     navigate('/')
   }

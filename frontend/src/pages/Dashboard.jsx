@@ -27,6 +27,8 @@ const Dashboard = () => {
              return(<PageNotFOund/>)
         }
     function logOut(){
+        if(!confirm("Are you sure logout?"))
+            return
     localStorage.clear();
     navigate('/')
   }

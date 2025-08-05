@@ -28,7 +28,7 @@ const Home = () => {
        <HeroSection/>
         <Marquee/>
         <FeaturesSectionDemo/>
-        <Rendercard/>
+        <Rendercard login={isLogin}/>
         <Faq/>
         <Footer/>
         <ChatBot/>
