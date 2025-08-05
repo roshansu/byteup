@@ -26,7 +26,7 @@ const verifyEmail = `
                 You can now log in to your account using the email and password you registered with.
               </p>
               <div style="text-align: center; margin: 30px 0;">
-                <a href="[Login Page URL]" style="background-color: #10b981; color: #ffffff; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold;">Login Now</a>
+                <a href="https://www.byteup.online/login" style="background-color: #10b981; color: #ffffff; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold;">Login Now</a>
               </div>
               <p style="font-size: 14px; color: #888;">If you experience any issues logging in, please contact our support team at <a href="mailto:roshanjaiswal.bca@gmail.com" style="color: #10b981;">roshanjaiswal.bca@gmail.com</a>.</p>
             </td>

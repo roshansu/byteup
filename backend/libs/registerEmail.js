@@ -29,7 +29,7 @@ const registerEmail = `
                 In the meantime, feel free to explore our platform and stay connected! Your password is <span style="font-weight:bold;">[password]<span/>
               </p>
               <div style="text-align: center; margin: 30px 0;">
-                <a href="[Your Website URL]" style="background-color: #4f46e5; color: #ffffff; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold;">Visit Platform</a>
+                <a href="https://www.byteup.online" style="background-color: #4f46e5; color: #ffffff; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold;">Visit Platform</a>
               </div>
               <p style="font-size: 14px; color: #888;">If you have any questions, reach out to us at <a href="mailto:roshanjaiswal.bca@gmail.com" style="color: #4f46e5;">roshanjaiswal.bca@gmail.com</a>.</p>
             </td>
