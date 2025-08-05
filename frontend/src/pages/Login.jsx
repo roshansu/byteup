@@ -6,6 +6,7 @@ import SuccessAlert from '../component/Successalert';
 import ErrorAlert from '../component/Erroralert';
 import { useNavigate } from 'react-router-dom';
 import PageNotFOund from './PageNotFound';
+import Meta from '../component/SEO';
 
 export default function LoginForm() {
   const [formData, setFormData] = useState({
@@ -108,6 +109,12 @@ export default function LoginForm() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center py-12 px-4">
+       <Meta
+  title="Login – ByteUP"
+  description="Login to your ByteUP account to explore coding events, participate in challenges, and connect with peers."
+  url="https://www.byteup.online/login"
+  image="https://www.byteup.online/og-image.png"
+/>
        { hide === 'process'?<WaitAlert/>:''}
         { hide === 'success'?<SuccessAlert close={setHide} text={"Login success"} />:''}
         { hide === 'error'?<ErrorAlert close={setHide} text={"Invalid email or password or you are not approved by our team!"} />:''}

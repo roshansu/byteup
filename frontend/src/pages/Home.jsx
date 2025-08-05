@@ -7,6 +7,7 @@ import Footer from '../component/Footer'
 import ChatBot from '../component/Chatbot'
 import Banner from '../component/Banner'
 import Faq from '../component/Faq'
+import Meta from '../component/SEO'
 import { useEffect } from 'react'
 
 const Home = () => {
@@ -25,6 +26,13 @@ const Home = () => {
 
   return (
     <div>
+      <Meta
+        title="ByteUP – Build Coding Culture & Connect Campus Talent"
+        description="ByteUP is a coding culture platform helping students connect, collaborate, and grow."
+        keywords="ByteUP, coding, campus, developers, events, challenges"
+        url="https://www.byteup.online/"
+        image="https://www.byteup.online/og-image.png"
+      />
        <HeroSection/>
         <Marquee/>
         <FeaturesSectionDemo/>

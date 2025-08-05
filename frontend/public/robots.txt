@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin-login
+
+Allow: /login
+Allow: /register
+Allow: /
+
+Sitemap: https://www.byteup.online/sitemap.xml

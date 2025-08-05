@@ -6,6 +6,7 @@ import WaitAlert from '../component/Waitalert';
 import SuccessAlert from '../component/Successalert'
 import ErrorAlert from '../component/Erroralert'
 import PageNotFOund from './PageNotFound';
+import Meta from '../component/SEO';
 
 export default function RegistrationForm() {
   const [formData, setFormData] = useState({
@@ -190,6 +191,13 @@ export default function RegistrationForm() {
 
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4">
+      <Meta
+  title="Register – Join ByteUP Today"
+  description="Create your ByteUP account to join coding events, showcase skills, and network with fellow student developers."
+  url="https://www.byteup.online/register"
+  image="https://www.byteup.online/og-image.png"
+/>
+
       { hide === 'process'?<WaitAlert/>:''}
       { hide === 'success'?<SuccessAlert close={setHide} text={"Registeration success! Check your email, now you will get response from our team soon."} />:''}
       { hide === 'error'?<ErrorAlert close={setHide} text={"User already register or something went wrong!!"} />:''}

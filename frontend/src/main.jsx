@@ -7,6 +7,7 @@ import LoginForm from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import ProfileUpdate from './pages/ProfileUpdate'
 import AdminLogin from './pages/AdminLogin'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
         
   const isLogin = JSON.parse(localStorage.getItem('isLogin'))
@@ -17,6 +18,7 @@ import AdminLogin from './pages/AdminLogin'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <HelmetProvider>
    <BrowserRouter>
     <Routes>
       <Route path='/' element={<Home/>}/>
@@ -27,5 +29,6 @@ createRoot(document.getElementById('root')).render(
       <Route path='/admin-login' element={<AdminLogin isLogin={isLogin}/>} />
     </Routes>
    </BrowserRouter>
+   </HelmetProvider>
   </StrictMode>,
 )
