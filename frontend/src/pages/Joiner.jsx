@@ -60,10 +60,10 @@ const Joiner = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
-
+// https://byteup-ten.vercel.app
   async function fetchData() {
     try {
-      const res = await fetch(`http://localhost:5000/get-joiners/${id}`, {
+      const res = await fetch(`https://byteup-ten.vercel.app/get-joiners/${id}`, {
         method: 'GET',
       });
 
