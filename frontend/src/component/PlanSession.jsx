@@ -34,7 +34,7 @@ export default function PlanSession() {
 
 
     return (
-       <div className="pb-10">
+       <div >
             { hide === 'success'?<SuccessAlert close={setHide} text={"Session planned"} />:''}
         <div onClick={()=>setOpen(open?false:true)} className="text-lg mt-4 text-white bg-blue-500 hover:bg-blue-700 cursor-pointer transition duration-200 font-medium rounded-xl py-2 px-4 flex items-center justify-center">
             Plan a new session
@@ -46,7 +46,7 @@ export default function PlanSession() {
             <div className="max-w-96 w-full px-4">
                 <label htmlFor="day" className="font-medium">Session day</label>
                 <div className="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-indigo-400 transition-all overflow-hidden">
-                    <select onChange={(e)=>setDay(e.target.value)} name="day" id="">
+                    <select required={true} onChange={(e)=>setDay(e.target.value)} name="day" id="">
                         <option selected={true} value="Everyday">Everyday</option>
                         <option value="Every Monday">Every Monday</option>
                         <option value="Every Tuesday">Every Tuesday</option>

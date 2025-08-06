@@ -18,6 +18,11 @@ import handlePhotoUpdate from "./routers/handlePhotoUpdate.js";
 import handleAdminLogin from "./routers/handleAdminLogin.js";
 import handleNewSession from "./routers/handleNewSession.js";
 import handleGetData from "./routers/handleGetData.js";
+import GetMentorSession from "./routers/GetMentorSession.js";
+import joinSession from "./routers/joinSession.js";
+import getSessionMember from "./routers/getSessionMember.js";
+import deleteSession from "./routers/deleteSession.js";
+import getJoiners from "./routers/getJoiners.js";
 
 dotenv.config();
 
@@ -48,8 +53,8 @@ app.listen(PORT, ()=>{
 app.post('/register',upload.single('photo'), handleRegister)
 app.post('/login', handleLogin)
 app.get('/getadmin', handleGetAdmin);
-app.get('/getsession', handleGetSession);
-app.get('/sessionuser', handleGetSessionUser);
+app.get('/getsession/:id', handleGetSession);
+// app.get('/sessionuser', handleGetSessionUser);
 app.get('/getmentor', handleGetMentor)
 app.get('/getmember', handleGetMember)
 app.get('/user/:id', handleGetUser)
@@ -59,3 +64,8 @@ app.post('/user/update/photo/:id', upload.single('photo'), handlePhotoUpdate)
 app.post('/adminlogin', handleAdminLogin)
 app.post('/newsession', handleNewSession)
 app.get('/getdata', handleGetData)
+app.get('/getsession-mentor/:id', GetMentorSession)
+app.patch('/join/:sessionId/:id', joinSession)
+app.get('/getsession-member/:id', getSessionMember)
+app.delete('/delete-session/:sessionId', deleteSession)
+app.get('/get-joiners/:id', getJoiners)

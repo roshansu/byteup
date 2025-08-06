@@ -3,7 +3,6 @@ import HeroSection from '../component/Hero'
 import Marquee from '../component/Example'
 import FeaturesSectionDemo from '../component/Feature'
 import Rendercard from '../component/Rendercard'
-import Footer from '../component/Footer'
 import ChatBot from '../component/Chatbot'
 import Banner from '../component/Banner'
 import Faq from '../component/Faq'
@@ -38,7 +37,7 @@ const Home = () => {
         <FeaturesSectionDemo/>
         <Rendercard login={isLogin}/>
         <Faq/>
-        <Footer/>
+    
         <ChatBot/>
         {
             isLogin?'':close?<Banner handleClose={setClose}/>:''

@@ -88,7 +88,7 @@ if(loading)
       <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent"></div>
       <div className={`marquee-inner ${reverse ? 'marquee-reverse' : ''} flex transform-gpu min-w-[200%] pt-10 pb-5`}>
         {repeatedCards.map((card, index) => (
-          <Card key={card._id} {...card} />
+          <Card key={card._id+index} {...card} />
         ))}
       </div>
       <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent"></div>

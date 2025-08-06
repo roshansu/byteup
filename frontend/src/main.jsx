@@ -6,7 +6,10 @@ import RegistrationForm from './pages/Register'
 import LoginForm from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import ProfileUpdate from './pages/ProfileUpdate'
+import Joiner from './pages/Joiner'
 import AdminLogin from './pages/AdminLogin'
+import Footer from './component/Footer'
+
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
         
@@ -27,7 +30,9 @@ createRoot(document.getElementById('root')).render(
       <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/profile' element={<ProfileUpdate isLogin={isLogin} role={role} userId={userId} />} />
       <Route path='/admin-login' element={<AdminLogin isLogin={isLogin}/>} />
+      <Route path='/joiners/:id' element={<Joiner/>} />
     </Routes>
+        <Footer/>
    </BrowserRouter>
    </HelmetProvider>
   </StrictMode>,

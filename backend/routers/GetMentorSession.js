@@ -1,11 +1,12 @@
-import Session from "../models/session.js"
+import Session from "../models/session.js";
+import User from "../models/user.js";
 
-const handleGetSession = async (req, res) =>{
-  const {id} = req.params
-  console.log(id)
+const GetMentorSession = async (req, res)=>{
     try {
+    const { id } = req.params;
+    console.log(id)
 
-    const sessions = await Session.find({ joined: { $nin: [id] } })
+    const sessions = await Session.find({ user: id })
       .populate('user', 'name course passout phone photo specialization linkedin github') // full planner detail
         console.log(sessions)
     if (!sessions.length) {
@@ -19,4 +20,4 @@ const handleGetSession = async (req, res) =>{
   }
 }
 
-export default handleGetSession
+export default GetMentorSession

@@ -1,5 +1,7 @@
 import User from "../models/user.js";
 
+// not using this api
+
 const handleGetSessionUser = async (req, res)=>{
     const userId = req.query.id;
 

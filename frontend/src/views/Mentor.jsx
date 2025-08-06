@@ -3,15 +3,15 @@ import PlanSession from '../component/PlanSession'
 import MemberViewCard from '../component/MemberViewCard'
 import Member from './Member'
 
-const Mentor = () => {
+const Mentor = ({role, id}) => {
   return (
-    <div>
-      <div className=' flex justify-center'>
+    <div >
+      <div className=' w-full flex justify-center'>
         <PlanSession/>
       </div>
 
-      <div className='flex justify-center flex-wrap gap-10'>
-        <Member/>
+      <div className='flex w-full justify-center flex-wrap gap-10'>
+        <Member id={id} role={role}/>
       </div>
     </div>
   )

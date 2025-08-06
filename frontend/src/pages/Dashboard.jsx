@@ -40,18 +40,18 @@ const Dashboard = () => {
                     ByteUP
                 </Link>
                  <h3 className='text-lg lg:text-2xl font-bold bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent'>
-                    {role === 'member'?'Join upcoming session':role === 'mentor'?'Plan or view session':role === 'admin'?'review request':''}
+                    {role === 'member'?'Join session':role === 'mentor'?'Plan session':role === 'admin'?'review request':''}
                 </h3>
                 <div className="flex items-center gap-5 text-gray-500">
                     <Link to={'/profile'} className={` ${role === 'admin'?'hidden':'block'} border rounded-full text-sm px-4 py-1`}>Profile</Link>
                     <button onClick={logOut} className={` ${role === 'admin'?'flex':'hidden'} px-4 justify-center content-center py-3 text-white bg-blue-600 rounded-xl`}>Logout</button>
                 </div>
             </div>
-            <div className="flex">
+            <div className="flex py-4 w-full justify-center">
             
             <div >
                 {
-                    role === 'member'?<Memeber/>: role === 'mentor'?<Mentor/>:role === 'admin'?<Admin/>:''
+                    role === 'member'?<Memeber id={id} role={role}/>: role === 'mentor'?<Mentor id={id} role={role}/>:role === 'admin'?<Admin/>:''
                 }
             </div>
             </div>
