@@ -72,7 +72,7 @@ console.log(userId)
   return (
     <div className="max-w-2xl mx-auto relative p-6 bg-white rounded-xl shadow space-y-4">
       {/* Photo */}
-      <button onClick={logOut} className="px-4 flex justify-center items-center absolute top-2 right-2 x-10 py-3 text-white bg-blue-600 rounded-xl">Logout</button>
+      <button onClick={logOut} className="px-4 flex justify-center items-center absolute top-2 font-medium right-2 x-10 py-2 text-white bg-blue-600 rounded-xl">Logout</button>
         { hide === 'success'?<SuccessAlert close={setHide} text={"Field updated"} />:''}
 
       <div className="flex items-center space-x-4">

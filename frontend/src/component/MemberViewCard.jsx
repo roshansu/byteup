@@ -78,7 +78,7 @@ export default function MemberViewCard({day,id, fetchData, fetchDataMentor, sess
                     </div>
 
                     <div className={` ${role === 'mentor' && click?'flex':'hidden'}  flex-col gap-2 w-full`}>
-                    <Link  to={`/joiners/${sessionId}`} className={` bg-blue-500 flex text-white w-full justify-center items-center py-1 hover:bg-blue-700 transition duration-200 cursor-pointer `}>Joiners</Link>
+                    <Link  to={`/joiners/${sessionId}`} className={` bg-blue-500 flex text-white w-full justify-center items-center py-1 hover:bg-blue-700 transition duration-200 cursor-pointer `}>View Participants</Link>
                     <button onClick={handleDelete} type="button" className={` flex bg-red-500 text-white w-full justify-center items-center py-1 hover:bg-red-700 transition duration-200 cursor-pointer`}>Delete</button>
                     </div>
                     </div>

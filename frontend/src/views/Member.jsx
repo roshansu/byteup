@@ -83,8 +83,8 @@ const Member = ({role, id}) => {
 
   return (
     <div>
-      <div className=' px-2 flex py-4 gap-10'>
-        <button onClick={handleClickMentor} className={` ${click?'bg-gray-400 text-black':'bg-green-600 text-white'} cursor-pointer px-4 py-2 transition-all duration-200 text-white font-medium rounded-xl `}>All</button>
+      <div className=' lg:px-32 px-2 flex py-4 gap-10'>
+        <button onClick={handleClickMentor} className={` ${click?'bg-gray-400 text-black':'bg-green-600 text-white'} cursor-pointer px-4 py-2 transition-all duration-200 text-white font-medium rounded-xl `}>{ role==="mentor"?"All":"Not Joined"}</button>
         <button onClick={handleClickMentor} className={` ${click?'bg-green-600 text-white':'bg-gray-400 text-black'} cursor-pointer px-4 py-2 transition-all duration-200 text-white font-medium rounded-xl `}>{ role==="mentor"?"My Session":"Joined"}</button>
       </div>
       <div className="flex lg:px-32 justify-center overflow-y-scroll max-h-screen flex-wrap gap-10 w-full py-10">
