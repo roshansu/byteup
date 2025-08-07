@@ -4,7 +4,7 @@ export default function MemberCard({name, photo,phone, github, login, linkedin, 
             <div className="bg-white rounded-2xl pb-2 overflow-hidden border border-gray-300">
                 <div className="w-64 flex justify-center pt-10">
                     <div className="w-28 h-28 rounded-full overflow-hidden">
-                        <img className="h-32 object-cover object-top" src={photo} alt={name} />
+                        <img className="h-32 w-32 object-cover object-top" src={photo} alt={name} />
                     </div>
                 </div>
                 <div className="flex flex-col items-center">
