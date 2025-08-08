@@ -15,7 +15,7 @@ const JoinerProfile = ({photo, name, course, passout, specialization, phone, lin
             alt={name}
             className="w-24 h-24 rounded-full border-3 border-white object-cover"
           />
-          <div className="text-white">
+          <div className="text-white w-36">
             <h2 className="text-xl font-bold">{name}</h2>
             <div className="flex items-center space-x-1 text-blue-100">
               <GraduationCap className="w-4 h-4" />
