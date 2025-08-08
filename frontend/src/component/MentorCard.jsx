@@ -14,7 +14,7 @@ const MentorCard = ({name, photo, login, about, course,phone, passout, linkedin,
 
     return (
         <div ref={divRef} onMouseMove={handleMouseMove} onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}
-            className="relative m-2 border border-gray-300 shrink-0 w-80 h-96 rounded-xl p-0.5 bg-white backdrop-blur-md text-gray-800 overflow-hidden shadow-lg cursor-pointer"
+            className="relative m-2 border border-gray-300 shrink-0 w-80 h-[420px] rounded-xl p-0.5 bg-white backdrop-blur-md text-gray-800 overflow-hidden shadow-lg cursor-pointer"
         >
             {visible && (
                 <div className="pointer-events-none blur-xl bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 size-60 absolute z-0 transition-opacity duration-300"
