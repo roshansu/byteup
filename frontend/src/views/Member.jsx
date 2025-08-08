@@ -165,7 +165,7 @@ const Member = ({ role, id }) => {
   return (
     <div className="min-h-screen w-full bg-gray-50">
       {/* Toggle Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-6">
+      <div className="flex  gap-4 justify-center items-center py-6">
         <button
           onClick={handleClickMentor}
           className={`${

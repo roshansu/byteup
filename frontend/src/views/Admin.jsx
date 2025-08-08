@@ -7,9 +7,11 @@ const Admin = () => {
 
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState([]);
+    const [click, setClick] = useState(false)
 
-    async function fetchData() {
-        const res = await fetch('https://byteup-ten.vercel.app/getadmin', {
+    async function fetchData(verified) {
+      setLoading(true)
+        const res = await fetch(`https://byteup-ten.vercel.app/getadmin/${verified}`, {
          method:'GET'
          })
         const data = await res.json();
@@ -28,8 +30,19 @@ const Admin = () => {
         }
 
     useEffect( ()=>{
-        fetchData()
+        fetchData(false)
     }, [])
+
+    async function handleFetch() {
+      setClick(click?false:true)
+
+      if(click){
+        fetchData(false)
+      }
+      else{
+        fetchData(true)
+      }
+    }
 
      if(loading){
             return(
@@ -38,7 +51,28 @@ const Admin = () => {
     }
 
   return (
+    <div className="min-h-screen w-full bg-gray-50">
+        <div className="flex gap-4 justify-center items-center py-6">
+        <button
+        onClick={handleFetch}
+          className={`${
+            !click ? 'bg-green-600 text-white' : 'bg-gray-300 text-black'
+          } px-6 py-2 font-semibold rounded-full transition-all duration-200`}
+        >
+          Pending
+        </button>
+        <button
+        onClick={handleFetch}
+          className={`${
+            click ? 'bg-green-600 text-white' : 'bg-gray-300 text-black'
+          } px-6 py-2 font-semibold rounded-full transition-all duration-200`}
+        >
+          Aprooved
+        </button>
+      </div>
      <div className="flex lg:px-32 justify-center overflow-y-scroll max-h-screen flex-wrap gap-10 w-full py-10">
+
+      
       {
         data.map((item)=>(
             <AdminCard key={item._id} role={item.role} verified={item.verified}
@@ -50,6 +84,7 @@ const Admin = () => {
         ))
       }
       
+    </div>
     </div>
   )
 }

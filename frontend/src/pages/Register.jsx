@@ -68,6 +68,8 @@ export default function RegistrationForm() {
     'Computer Fundamental/Organization',
     'Cybersecurity',
     'Operating System',
+    'Mathematics',
+    'Communication',
     'Computer Network',
     'OS/CN',
     'Cloud Computing',

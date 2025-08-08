@@ -52,7 +52,7 @@ app.listen(PORT, ()=>{
 
 app.post('/register',upload.single('photo'), handleRegister)
 app.post('/login', handleLogin)
-app.get('/getadmin', handleGetAdmin);
+app.get('/getadmin/:verified', handleGetAdmin);
 app.get('/getsession/:id', handleGetSession);
 // app.get('/sessionuser', handleGetSessionUser);
 app.get('/getmentor', handleGetMentor)
